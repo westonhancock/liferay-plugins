@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN"
+"http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
+
+<look-and-feel>
+    <compatibility>
+        <version>6.2.0+</version>
+    </compatibility>
+    <theme id="cup-of-joe" name="Cup of Joe">
+        <settings>
+            <setting key="header-type" value="detailed" />
+            <setting configurable="true"
+                key="slogan"
+                type="textarea"
+                value=""
+            />
+            <setting configurable="true"
+                key="display-slogan-footer"
+                type="textarea"
+                value="true"
+            />
+            <!--<color-scheme id="01" name="Cinnamon Roast">
+                <css-class>cinnamon-roast</css-class>
+                <color-scheme-images-path>
+                    ${images-path}/color_shemes/${css-class}
+                </color-scheme-images-path>
+            </color-scheme>
+            <color-scheme id="02" name="French Roast">
+                <css-class>french-roast</css-class>
+            </color-scheme>-->
+        </settings>
+    </theme>
+</look-and-feel>
