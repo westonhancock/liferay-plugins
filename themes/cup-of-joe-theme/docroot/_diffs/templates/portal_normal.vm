@@ -36,10 +36,6 @@ $theme.include($body_top_include)
 					</span>
 				#end
 			</h1>
-
-			<!-- <h2 class="page-title">
-				<span>$the_title</span>
-			</h2> -->
 		</div>
 
 		#if (!$is_signed_in)
@@ -50,15 +46,18 @@ $theme.include($body_top_include)
 			#parse ("$full_templates_path/navigation.vm")
 		#end
 	</header>
-	<div id="carousel-header" class="carousel-slide" data-right="carousel">
-		<ol class="carousel-indicators">
-		</ol>
+	<div class="carousel-slide" data-right="carousel" id="carousel-header">
+		
+		<ol class="carousel-indicators"></ol>
+		
 		<div class="carousel-inner">
 			<div class="carousel-item">
 				<div class="carousel-container">
 					<div class="carousel-caption">
 						<h1></h1>
+
 						<p></p>
+
 						<p></p>
 					</div>
 				</div>
@@ -86,9 +85,12 @@ $theme.include($body_top_include)
 						<div class="footer-column">
 							<!--Need to add an editable text box here -->
 							<div class="footer-title">Archives</div>
+							
 							<ul>
 								<li><a href="">Optional link 1</a></li>
+								
 								<li><a href="">Optional link 2</a></li>
+								
 								<li><a href="">Optional link 3</a></li>
 							</ul>
 						</div>
@@ -107,19 +109,23 @@ $theme.include($body_top_include)
 							<div class="social-icons">
 								<ul>
 									<li>
-										<a id="facebook" href="http://www.facebook.com" target="_blank"></a>
+										<a href="http://www.facebook.com" id="facebook" target="_blank"></a>
 									</li>
+									
 									<li>
-										<a id="twitter" href="http://www.twitter.com" target="_blank"></a>
+										<a href="http://plus.google.com" id="googlePlus" target="_blank"></a>
+									</li>									
+									
+									<li>
+										<a href="http://www.linkedin.com" id="linkedin" target="_blank"></a>
 									</li>
+									
 									<li>
-										<a id="googlePlus" href="http://plus.google.com" target="_blank"></a>
+										<a href="http://www.tumblr.com" id="tumblr" target="_blank"></a>
 									</li>
+									
 									<li>
-										<a id="tumblr" href="http://www.tumblr.com" target="_blank"></a>
-									</li>
-									<li>
-										<a id="linkedin" href="http://www.linkedin.com" target="_blank"></a>
+										<a href="http://www.twitter.com" id="twitter" target="_blank"></a>
 									</li>
 								</ul>
 							</div>
@@ -129,7 +135,6 @@ $theme.include($body_top_include)
 			</div>
 		</div>
 	</footer>
-	
 </div>
 
 $theme.include($body_bottom_include)

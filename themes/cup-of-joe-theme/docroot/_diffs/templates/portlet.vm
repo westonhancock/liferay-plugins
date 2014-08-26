@@ -7,7 +7,7 @@
 <section class="portlet" id="portlet_$portlet_id">
 	<header class="portlet-topper">
 		<h1 class="portlet-title">
-			<i class="fa icon-collapse icon-large portlet-icon" id="icon-topper"></i>
+			<i class="icon-collapse icon-large portlet-icon" id="icon-topper"></i>
 			$theme.portletIconPortlet() <span class="portlet-title-text">$portlet_title</span>
 		</h1>
 
