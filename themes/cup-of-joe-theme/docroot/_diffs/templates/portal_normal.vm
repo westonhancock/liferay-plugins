@@ -46,8 +46,8 @@ $theme.include($body_top_include)
 			#parse ("$full_templates_path/navigation.vm")
 		#end
 	</header>
+	
 	<div class="carousel-slide" data-right="carousel" id="carousel-header">
-		
 		<ol class="carousel-indicators"></ol>
 		
 		<div class="carousel-inner">
@@ -64,6 +64,7 @@ $theme.include($body_top_include)
 			</div>
 		</div>
 	</div>
+	
 	<div id="content">
 		<nav id="breadcrumbs">#breadcrumbs()</nav>
 
@@ -77,6 +78,7 @@ $theme.include($body_top_include)
 			$theme.wrapPortlet("portlet.vm", $content_include)
 		#end
 	</div>
+	
 	<footer id="footer" role="contentinfo">
 		<div class="footer-main">
 			<div class="footer-container">
@@ -88,15 +90,14 @@ $theme.include($body_top_include)
 							
 							<ul>
 								<li><a href="">Optional link 1</a></li>
-								
-								<li><a href="">Optional link 2</a></li>
-								
+								<li><a href="">Optional link 2</a></li>								
 								<li><a href="">Optional link 3</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>		
+			
 			<div class="sub-footer">
 				<div class="sub-footer-container">
 					<div class="sub-footer-row">
@@ -105,25 +106,22 @@ $theme.include($body_top_include)
 								#language ("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
 							</div>
 						</div>
+						
 						<div class="sub-footer-column" id="column-right">
 							<div class="social-icons">
 								<ul>
 									<li>
 										<a href="http://www.facebook.com" id="facebook" target="_blank"></a>
-									</li>
-									
+									</li>									
 									<li>
 										<a href="http://plus.google.com" id="googlePlus" target="_blank"></a>
-									</li>									
-									
+									</li>																		
 									<li>
 										<a href="http://www.linkedin.com" id="linkedin" target="_blank"></a>
-									</li>
-									
+									</li>									
 									<li>
 										<a href="http://www.tumblr.com" id="tumblr" target="_blank"></a>
-									</li>
-									
+									</li>									
 									<li>
 										<a href="http://www.twitter.com" id="twitter" target="_blank"></a>
 									</li>
