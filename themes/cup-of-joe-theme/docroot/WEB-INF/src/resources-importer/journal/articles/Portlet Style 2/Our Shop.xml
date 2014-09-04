@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element instance-id="" name="product_icon" type="text" index-type="">
+		<dynamic-content><![CDATA[icon-home]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="" name="product_header" type="text" index-type="">
+		<dynamic-content><![CDATA[Our Shop]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="" name="product_synopsis" type="textarea" index-type="">
+		<dynamic-content><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis volutpat orci. Etiam sed pellentesque tellus. Donec fringilla est eu diam vestibulum ultrices. Pellentesque dui turpis, blandit vel tortor at, lacinia consectetur ligula]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="" name="pruduct_link" type="ddm-link-to-page" index-type="">
+		<dynamic-content><![CDATA[]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="" name="product_link_title" type="" index-type="">
+		<dynamic-content><![CDATA[Visit]]></dynamic-content>
+	</dynamic-element>
+</root>

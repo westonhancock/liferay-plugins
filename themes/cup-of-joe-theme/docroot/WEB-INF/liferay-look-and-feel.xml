@@ -9,25 +9,55 @@
     <theme id="cup-of-joe" name="Cup of Joe">
         <settings>
             <setting key="header-type" value="detailed" />
+           
+           <!-- footer links -->
             <setting configurable="true"
-                key="slogan"
-                type="textarea"
+                key="display-footer-link-1"
+                type="link"
                 value=""
             />
+           
             <setting configurable="true"
-                key="display-slogan-footer"
-                type="textarea"
+                key="display-footer-link-2"
+                type="link"
                 value="true"
             />
-            <!--<color-scheme id="01" name="Cinnamon Roast">
-                <css-class>cinnamon-roast</css-class>
-                <color-scheme-images-path>
-                    ${images-path}/color_shemes/${css-class}
-                </color-scheme-images-path>
-            </color-scheme>
-            <color-scheme id="02" name="French Roast">
-                <css-class>french-roast</css-class>
-            </color-scheme>-->
+           
+            <setting configurable="true"
+                key="display-footer-link-3"
+                type="link"
+                value="true"
+            />
+            
+            <!-- footer social icons -->
+            <setting configurable="true"
+                key="display-social-media-icon_facebook"
+                type="text"
+                value="true"
+            />
+           
+            <setting configurable="true"
+                key="display-social-media-icon_googlePlus"
+                type="text"
+                value="true"
+            />
+          
+            <setting configurable="true"
+                key="display-social-media-icon_linkedIn"
+                type="text"
+                value="true"
+            />
+          
+            <setting configurable="true"
+                key="display-social-media-icon_tumblr"
+                type="text"
+                value="true"
+            />
+            <setting configurable="true"
+                key="display-social-media-icon_twitter"
+                type="text"
+                value="true"
+            />
         </settings>
     </theme>
 </look-and-feel>

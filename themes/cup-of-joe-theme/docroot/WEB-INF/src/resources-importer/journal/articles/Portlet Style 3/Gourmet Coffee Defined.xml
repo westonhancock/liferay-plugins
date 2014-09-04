@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element instance-id="" name="synopsis" type="textarea" index-type="">
+		<dynamic-content><![CDATA[Nam a tincidunt felis, non eleifend enim. Praesent purus neque, faucibus vel volutpat vel, varius sit amet dolor. Quisque nec justo porttitor, euismod ipsum vestibulum, placerat dolor. Morbi porta orci purus, in rhoncus metus placerat a. Donec porttitor dignissim magna, in gravida justo placerat id.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="" name="synopsis_link" type="ddm-link-to-page" index-type="">
+		<dynamic-content><![CDATA[]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="" name="synopsis_link_name" type="text" index-type="">
+		<dynamic-content><![CDATA[Read]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="" name="link_icon" type="text" index-type="">
+		<dynamic-content><![CDATA[icon-caret-right]]></dynamic-content>
+	</dynamic-element>
+</root>

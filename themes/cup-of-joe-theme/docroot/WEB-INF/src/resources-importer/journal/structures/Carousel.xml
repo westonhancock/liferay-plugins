@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="keyword" name="height" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Height]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[1-100]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Set height as percentage of browser width (without % sign)]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>

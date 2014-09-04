@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element instance-id="" name="height" type="text" index-type="">
+		<dynamic-content><![CDATA[1-100]]></dynamic-content>
+	</dynamic-element>
+</root>

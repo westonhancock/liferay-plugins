@@ -56,14 +56,11 @@ $defaultLink2: #666;
 		}
 	}
 	
-	.nav-pills > .active {
-
-		> a {
+	.nav-pills > .active > a {
+		background-color: $coffeeBrown;
+		
+		&:hover {
 			background-color: $coffeeBrown;
-			
-			&:hover {
-				background-color: $coffeeBrown;
-			}
 		}
 	}		
 
@@ -85,14 +82,18 @@ $defaultLink2: #666;
 			width: 100%;
 		}
 
-		.site-title {				
+		.site-title {
+			line-height: 68px;
+
 			img {
 				display: none;
 			}
 
 			.site-name {
 				color: $coffeeBrown;
-				font: bold 58px "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 58px;
+				font-weight: bold;
 			}
 		}
 
@@ -122,7 +123,6 @@ $defaultLink2: #666;
 	}
 
 	@media all and (min-width: 768px) {
-		
 		#banner {
 			border-bottom: 3px solid $coffeeBrown;
 			height: 68px;
@@ -134,14 +134,18 @@ $defaultLink2: #666;
 			width: 50%;
 		}
 
-		.site-title {				
+		.site-title {
+			line-height: 68px;
+
 			img {
 				display: none;
 			}
 
 			.site-name {
 				color: $coffeeBrown;
-				font: bold 58px "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 58px;
+				font-weight: bold;
 			}
 		}
 
@@ -170,10 +174,80 @@ $defaultLink2: #666;
 	}
 
 	/* ---------- Carousel ---------- */
-	.carousel-inner {
-		background-image: url('..//images/banner.png');
-		height: 40vw;
-		line-height: auto;
+	.carousel {
+		margin-bottom: 60px;
+	}
+
+	#myCarousel {
+		margin-top: -90px;
+		position: relative;
+		text-align: center;
+		width: 100%;
+	    
+		.carousel-item {
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			text-align: center;
+			width: 100%;
+		
+			.carousel-content {	
+				position: relative;
+				text-align: center;
+				top: 30%;
+				width: 100%;
+
+		    	.header {
+		    		color: #FFF;
+		    		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		    		font-size: 36px;
+		    		font-weight: 500;
+		    		line-height: 1.1em;
+			    }
+
+		    	.text, .destination {
+		    		color: #FFF;
+		    		font-size: 21px;
+		    		font-weight: normal;
+		    		margin: 0 auto 20px;
+		    		width: 35%;
+
+			    	.link {
+			    		background-color: $coffeeBrown;
+			    		color: #FFF;
+			    		font-size: 16px;
+			    		line-height: 1.33;
+			    		padding: 10px 16px;
+	    
+				    	&:hover {
+				    		border: 1px solid #FFF;
+				    		color: #FFF;
+				    		text-decoration: none;
+				    	}
+				    }
+			    }
+
+			    @media all and (max-width: 991px) {
+			    	.text {
+			    		width: 60%;
+			    	}
+			    }
+
+			    @media all and (max-width: 767px) {
+			    	.text {
+			    		font-size: 13px;
+			    		width: 70%;
+			    	}
+			    }
+		    }
+		}
+
+		>menu {
+			background: none;
+
+			li:first-child {
+				display: none;
+			}
+		}
 	}
 
 /* ---------- Page Content ---------- */  
@@ -193,8 +267,9 @@ $defaultLink2: #666;
 		background: #FFF none;
 		border: 1px solid #DDD;
 		color: $defaultLink;
-		font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-		
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-size: 14px;
+
 		&:hover {
 			background-color: #E6E6E6;
 			color: $defaultLink2;
@@ -205,7 +280,8 @@ $defaultLink2: #666;
 		background: #FFF none;
 		border: 1px solid #DDD;
 		color: $defaultLink;
-		font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-size: 14px;
 		padding: 5px 12px;
 	}
 
@@ -216,25 +292,36 @@ $defaultLink2: #666;
 	}
 
 	@media all and (min-width: 768px) {
-		#main-content {
+		.portlet-style-2, .portlet-style-3 {
 			margin: auto;
 			width: 750px;
+		}
+
+		.portlet-style-1 {
+			width: 100%;
 		}
 	}
 
 	@media all and (min-width: 992px) {
-		#main-content {
+		.portlet-style-2, .portlet-style-3 {
 			width: 970px;
 		}
 	}
 
 	@media all and (min-width: 1200px) {
-		#main-content {
+		.portlet-style-2, .portlet-style-3 {
 			width: 1170px;
 		}
 	}
 
+	@media all and (min-width: 1445px){
+		.portlet-style-2, .portlet-style-3 {
+			width: 1410px;
+		}
+	}
+
 /* ---------- Portlet Style Main ---------- */
+
 	/* ------- btns and nav -------*/
 	#main-content {
 		.portlet {
@@ -248,9 +335,15 @@ $defaultLink2: #666;
 				background: $coffeeBrown none;
 				border: 1px solid transparent;
 				color: #FFF;
-				font: normal 14px 'Montserrat', sans-serif;
-				
+				font-family: 'Montserrat', sans-serif;
+				font-size: 14px;
+				font-weight: normal;
+
 				&:hover {
+					color: #FFF;
+				}
+
+				i {
 					color: #FFF;
 				}
 			}
@@ -259,7 +352,9 @@ $defaultLink2: #666;
 				background: $coffeeBrown none;
 				border: 1px solid transparent;
 				color: #FFF;
-				font: normal 12px 'Montserrat', sans-serif;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 14px;
+				font-weight: normal;
 			}
 		}
 
@@ -294,7 +389,9 @@ $defaultLink2: #666;
 
 				.portlet-title-text {
 					color: $coffeeBrown;
-					font: normal 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+					font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+					font-size: 18px;
+					font-weight: normal;
 					line-height: 1.1em;
 					margin-top: 20px;
 					margin-bottom: 10px;
@@ -308,8 +405,12 @@ $defaultLink2: #666;
 			background: #FFF none;
 		}
 
-		.portlet-body img {
-			display: none;
+		.portlet-body{
+			.navbar, .navigation .subscribe, .taglib-rss, .page-actions {
+				 img {
+					display: none;
+				}
+			}
 		}
 
 		.portlet-content {
@@ -317,17 +418,15 @@ $defaultLink2: #666;
 			padding: 0 15px 15px;
 		
 			.icons-container {
-				background-color: #FFF;
-				border-top: 1px solid #e8e8e8;
+				background-color: $darkBlueGray;
 				color: $coffeeBrown;
-				margin: 15px -15px -15px;
-				line-height: 40px;
-				padding: 0 10px 0 15px;
+				padding-top: 0;
+				margin: 1px -15px;
 			}
 			
 			.lfr-icon-actions {
-				background-color: #FFF;
-				color: $darkBlueGray;
+				background-color: $darkBlueGray;
+				color: $defaultLink2;
 
 				.lfr-icon-action  {
 					color: $coffeeBrown;
@@ -337,10 +436,6 @@ $defaultLink2: #666;
 						margin-left: 5px;
 						padding-left:15px;
 						text-decoration: none;
-
-						&.taglib-text {
-							max-width: none;
-						}
 					}
 
 					a:hover span {
@@ -348,11 +443,12 @@ $defaultLink2: #666;
 						text-decoration: none;
 					}
 				} 
-			}
+			}		
 		}
 
 		.portlet-content-container > .portlet-body {
-			font: 13px "Open Sans", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font: "Open Sans", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 13px;
 			line-height: 20px;
 		}
 
@@ -365,7 +461,8 @@ $defaultLink2: #666;
 					background: #FFF none;
 					border: 1px solid #DDD;
 					color: $defaultLink;
-					font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					font-size: 14px;
 				}
 
 				.btn:hover, .btn.btn-navbar:hover, input[type="submit"]:hover {
@@ -396,39 +493,31 @@ $defaultLink2: #666;
 				color: $darkBlueGray;
 				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				min-height: 1px;
-				padding: 0 15px;
+				padding: 0 30px;
 				position: relative;
 				text-align: center;
 
 				.portlet-title-text {
 					color: #4B4B4B;
-					font: bold 24px;
+					font-size: 24px;
+					font-weight: bold;
 					line-height: 36px;
 					margin: 0;
 				}
 			}
 
 			@media all and (max-width: 767px) {
-				
 				.portlet-title {
-					color: #4B4B4B;
 					display: block;
-					font: bold 24px;
-					line-height: 36px;					
-					text-align: center;
 					text-transform: uppercase;
 				}
 			}
 
 			@media all and (min-width: 768px) {
-
 				.portlet-title {
-					color: #4B4B4B;
-					display: inline-block;
-					font: bold 24px;
-					line-height: 36px;
-					text-align: center;
-					text-transform: uppercase;
+					.portlet-title-text {
+						display: inline-block;
+					}
 
 					&::before, {
 						border-bottom: 1px solid #2C3E50;
@@ -436,7 +525,7 @@ $defaultLink2: #666;
 						content: "";
 						display: inline-block;
 						height: 0;
-						margin-bottom: 8px;
+						margin-bottom: 15px;
 						margin-right: 12px;
 						width: 80px;
 					}
@@ -447,7 +536,7 @@ $defaultLink2: #666;
 						content: "";
 						display: inline-block;
 						height: 0;
-						margin-bottom: 8px;
+						margin-bottom: 15px;
 						margin-left: 12px;
 						width: 80px;
 					}
@@ -461,10 +550,6 @@ $defaultLink2: #666;
 			.portlet-body {
 				font-size: 13px;
 				text-align: center;
-				
-				img {
-					display: none;
-				}
 			}
 
 			.portlet-content {
@@ -490,14 +575,16 @@ $defaultLink2: #666;
 					background: #FFF none;
 					border: 1px solid #DDD;
 					color: $defaultLink;
-					font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					font-size: 14px
 				}
 
 				.btn.btn-navbar {
 					background: #FFF none;
 					border: 1px solid #DDD;
 					color: #999;
-					font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					font-size: 14px
 				}
 
 				.btn:hover, .btn.btn-navbar:hover, input[type="submit"]:hover {
@@ -523,6 +610,15 @@ $defaultLink2: #666;
 				color: #4B4B4B;
 			}
 
+			.portlet-journal-content {
+				.portlet .portlet-title > i {
+					display: none;
+				}
+
+				.portlet-title-text {
+					display: none;
+				}
+			}
 			.portlet {
 				border: 0;
 				color: $darkBlueGray;
@@ -550,7 +646,8 @@ $defaultLink2: #666;
 					
 					.portlet-title-text {
 						color: #4B4B4B;
-						font: normal 16px;
+						font-size: 16px;
+						font-weight: normal;
 						line-height: 40px;
 						margin: 0;
 						position: static;
@@ -604,15 +701,23 @@ $defaultLink2: #666;
 
 	/* ------- btns and nav -------*/
 		.portlet-style-3 {
+			margin: 30px auto;
+
 			.portlet {
 				.btn, .btn.btn-navbar {
 					background: $coffeeBrown none;
 					border: 1px solid transparent;
 					color: #FFF;
-					font: normal 14px 'Montserrat', sans-serif;
+					font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					font-size: 14px;
+					font-weight: normal;
 					
 					&:hover {
 						color: #fff;
+					}
+
+					i {
+						color: #FFF;
 					}
 				}
 
@@ -620,7 +725,9 @@ $defaultLink2: #666;
 					background: $coffeeBrown none;
 					border: 1px solid transparent;
 					color: #FFF;
-					font: normal 12px 'Montserrat', sans-serif;
+					font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+					font-size: 12px;
+					font-weight: normal;
 				}
 			}
 
@@ -653,7 +760,9 @@ $defaultLink2: #666;
 
 					.portlet-title-text {
 						color: $coffeeBrown;
-						font: normal 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+						font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+						font-size: 18px;
+						font-weight: normal;
 						line-height: 1.1em;
 						margin-top: 20px;
 						margin-bottom: 10px;
@@ -675,17 +784,15 @@ $defaultLink2: #666;
 				padding: 0 15px 15px;
 			
 				.icons-container {
-					background-color: #FFF;
-					border-top: 1px solid #e8e8e8;
+					background-color: $darkBlueGray;
 					color: $coffeeBrown;
-					line-height: 40px;
-					margin: 15px -15px -15px;
-					padding: 0 10px 0 15px;
+					padding-top: 0;
+					margin: 1px -15px;
 				}
 				
 				.lfr-icon-actions {
-					background-color: #FFF;
-					color: $darkBlueGray;
+					background-color: $darkBlueGray;
+					color: $defaultLink2;
 
 					.lfr-icon-action  {
 						color: $coffeeBrown;
@@ -695,10 +802,6 @@ $defaultLink2: #666;
 							margin-left: 5px;
 							padding-left:15px;
 							text-decoration: none;
-
-							&.taglib-text {
-								max-width: none;
-							}
 						}
 
 						a:hover span {
@@ -710,7 +813,8 @@ $defaultLink2: #666;
 			}
 
 			.portlet-content-container > .portlet-body {
-				font: 13px "Open Sans", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-family: "Open Sans", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 13px;
 				line-height: 20px;
 			}
 		}
@@ -754,7 +858,8 @@ $defaultLink2: #666;
 
 		.footer-title {
 			color: $coffeeBrown;
-			font: bold "Montserrat", sans-serif;
+			font-family:  "Montserrat", sans-serif;
+			font-weight: bold;
 			margin: 0 0 20px;
 			padding: 0 0 8px;
 			text-transform: uppercase;
@@ -771,7 +876,8 @@ $defaultLink2: #666;
 				border-bottom: 1px #dedede solid;
 				color: #FFF;
 				display: block;
-				font: 15px "Montserrat", sans-serif;
+				font-family: "Montserrat", sans-serif;
+				font-size: 15px;
 				line-height: 20px;
 				margin: 0;
 				overflow: hidden;
@@ -792,7 +898,8 @@ $defaultLink2: #666;
 			color: #000;
 			clear: both;
 			display: block;
-			font: 11px "Open Sans", sans-serif;
+			font-family: "Open Sans", sans-serif;
+			font-size: 11px;
 			height: auto;
 			margin-left: auto;
 			margin-right: auto;
@@ -817,7 +924,7 @@ $defaultLink2: #666;
 			.footer-container {
 				padding-left: 20px;
 				padding-right: 20px;
-				width: 100%;
+				width: 95%;
 			}
 			
 			.footer-column, .footer-row, .sub-footer-row {
@@ -906,6 +1013,20 @@ $defaultLink2: #666;
 
 			.sub-footer-column, .social-icons {
 				width: 555px;
+			}
+		}
+
+		@media all and (min-width: 1445px) {
+			.footer-container, .sub-footer-container {
+				width: 1380px;
+			}
+
+			.footer-row, .sub-footer-row {
+				width: 1410px;
+			}
+
+			.sub-footer-column, .social-icons {
+				width: 675px;
 			}
 		}
 
@@ -1004,6 +1125,152 @@ $defaultLink2: #666;
 		}
 	}
 
+/* ------------ Web Content ------------ */
+	body{
+		#main-content{
+			.portlet-style-1 {
+				.portlet-journal-content {
+					.portlet {
+						padding: 0;
+
+						.portlet-title {
+							.portlet-title-text {
+								font-size: 24px;
+								font-weight: bold;
+								line-height: 30px;
+								display: inline-block;
+							}
+
+							&::before{
+								display: none;
+							}
+
+							&::after {
+								display: none;
+							}
+						}
+
+						.portlet-content {
+							padding: 0;
+						}
+					}
+
+					.heading-title {
+						color: $darkBlueGray;
+						font-size: 24px;
+						font-weight: bold;
+						height: 30px;
+						margin: -35px auto 1px;
+						width: 100%;
+						text-transform: uppercase;
+
+						&::before, {
+							border-bottom: 1px solid #2C3E50;
+							border-top: 3px solid #BDC3C7;
+							content: "";
+							display: inline-block;
+							height: 0;
+							margin-bottom: 7px;
+							margin-right: 12px;
+							width: 80px;
+						}
+
+						&::after {
+							border-bottom: 1px solid #2C3E50;
+							border-top: 3px solid #BDC3C7;
+							content: "";
+							display: inline-block;
+							height: 0;
+							margin-bottom: 7px;
+							margin-left: 12px;
+							width: 80px;
+						}
+					}
+
+					@media all and (max-width: 767px) {
+						.heading-title {
+							&::before {
+								display: none;
+							}
+
+							&::after {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+
+			.portlet-style-2 {								
+				.portlet-journal-content {
+					.portlet .portlet-content {
+						margin-top: 3px;
+					}
+
+					.journal-content-article {
+						.product-header-icon {
+							margin: 10px auto 5px;
+	
+							i {
+								color: $coffeeBrown;
+								font-size: 39px;
+								position: relative;
+							}
+						}
+
+						h1 {
+							font-size: 16px;
+							font-weight: normal;
+							line-height: 35px;
+							padding-bottom: 5px;
+							text-transform: uppercase;
+						}
+					}
+					.portlet:hover {
+						.journal-content-article {
+							.product-header-icon {
+								margin: 5px auto 10px;
+							}
+						}
+					}
+				}						
+			}
+
+			.portlet-style-3 {
+				.portlet-journal-content {
+					.portlet-content {
+						padding-bottom: 0;
+					}
+
+					p {
+						margin: 0 0 5px;
+					}
+
+					.portlet-footer {
+						border-top: 1px solid #DBDBDB;
+						margin: 0 -15px;
+						padding-right: 30px;
+						width: 100%;
+
+						a {
+							color: #878787;
+							line-height: 42px;
+							padding-left: 10px;
+
+							&:hover {
+								color: $defaultLink;
+							}
+
+							i {
+								font-size: 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 /* ---------------- Extras ---------------- */
 	.nav-pills > .active {
 		> a:hover {
@@ -1027,6 +1294,16 @@ $defaultLink2: #666;
 		@include border-radius(4px);
 	}
 
+    #myCarousel {
+    	.carousel-item .carousel-content .destination .link {
+    		@include border-radius(6px);
+
+    		&:hover {
+	    		@include opacity(0.8);			    			
+    		}			    		
+    	}
+    }
+    
 	#main-content {
 		.portlet {
 			.btn, .btn.btn-navbar, input[type="submit"] {
@@ -1108,6 +1385,12 @@ $defaultLink2: #666;
 
 		#twitter {
 			@include transition(all 0.2s ease);
+		}
+	}
+	
+	body #main-content {
+		.portlet-style-2 .portlet-journal-content .journal-content-article .product-header-icon {
+			@include transition (margin 0.3s ease);
 		}
 	}
 }

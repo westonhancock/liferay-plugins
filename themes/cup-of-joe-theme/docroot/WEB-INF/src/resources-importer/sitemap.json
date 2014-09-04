@@ -1,22 +1,15 @@
 {
-	"layoutTemplateId": "2_columns_ii",
+	"layoutTemplateId": "1_4_1_3_columns",
 	"privatePages": [
 		{
 			"columns": [
 				[
-					{
-						"portletId": "58"
-					}
-				],
-				[
-					{
-						"portletId": "47"
-					}
+					"Main Carousel.xml", 
 				]
 			],
 			"friendlyURL": "/home",
-			"name": "Welcome",
-			"title": "Welcome"
+			"name": "Home",
+			"title": "Home"
 		}
 	]
 }

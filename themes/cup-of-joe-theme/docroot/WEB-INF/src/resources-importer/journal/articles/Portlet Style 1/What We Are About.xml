@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element instance-id="" name="title" type="text" index-type="">
+		<dynamic-content><![CDATA[What We Are About]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="" name="content_text" type="textarea" index-type="">
+		<dynamic-content><![CDATA[We are awesome. We only give you the best of the best of the best. Here are all the reasons why!]]></dynamic-content>
+	</dynamic-element>
+</root>

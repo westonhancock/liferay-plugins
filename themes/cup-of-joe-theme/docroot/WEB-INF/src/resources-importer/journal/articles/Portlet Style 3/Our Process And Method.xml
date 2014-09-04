@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element instance-id="synopsis" name="" type="textarea" index-type="">
+		<dynamic-content><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis volutpat orci. Etiam sed pellentesque tellus. Donec fringilla est eu diam vestibulum ultrices. Pellentesque dui turpis, blandit vel tortor at, lacinia consectetur ligula. Nam a tincidunt felis, non eleifend enim. ]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="" name="synopsis_link" type="ddm-link-to-page" index-type="">
+		<dynamic-content><![CDATA[]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="" name="synopsis_link_name" type="text" index-type="">
+		<dynamic-content><![CDATA[Read]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="" name="link_icon" type="text" index-type="">
+		<dynamic-content><![CDATA[icon-double-angle-right]]></dynamic-content>
+	</dynamic-element>
+</root>
