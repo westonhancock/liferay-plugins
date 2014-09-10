@@ -2,9 +2,9 @@
 
 <root available-locales="en_US" default-locale="en_US">
 	<dynamic-element name="title" type="text">
-		<dynamic-content><![CDATA[What We Are About]]></dynamic-content>
+		<dynamic-content><![CDATA[Enjoy]]></dynamic-content>
 	</dynamic-element>
 	<dynamic-element name="content_text" type="textarea">
-		<dynamic-content><![CDATA[We are awesome. We only give you the best of the best of the best. Here are all the reasons why!]]></dynamic-content>
+		<dynamic-content><![CDATA[Experience the world of coffee and enjoy one of our amazing products!]]></dynamic-content>
 	</dynamic-element>
 </root>

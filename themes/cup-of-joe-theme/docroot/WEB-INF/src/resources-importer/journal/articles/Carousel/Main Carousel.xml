@@ -1,7 +1,55 @@
 <?xml version="1.0"?>
 
 <root available-locales="en_US" default-locale="en_US">
-	<dynamic-element instance-id="" name="height" type="text" index-type="">
-		<dynamic-content><![CDATA[1-100]]></dynamic-content>
+	<dynamic-element name="height" type="text">
+		<dynamic-content><![CDATA[40]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="transition_delay" type="select">
+		<dynamic-content><![CDATA[5]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Image_1" type="ddm-documentlibrary">
+		<dynamic-content><![CDATA[[$FILE=carousel_image_1.jpg$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="tagline_1" type="text">
+		<dynamic-content><![CDATA[Lorem ipsum]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="synopsis_1" type="textarea">
+		<dynamic-content><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis leo vitae purus tincidunt sodales ac semper sapien. Nunc pellentesque.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="link_1_url" type="text">
+		<dynamic-content><![CDATA[http://]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="link_1_name" type="text">
+		<dynamic-content><![CDATA[Read]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Image_2" type="ddm-documentlibrary">
+		<dynamic-content><![CDATA[[$FILE=carousel_image_2.jpg$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="tagline_2" type="text">
+		<dynamic-content><![CDATA[Lorem ipsum]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="synopsis_2" type="textarea">
+		<dynamic-content><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis leo vitae purus tincidunt sodales ac semper sapien. Nunc pellentesque.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="link_2_url" type="text">
+		<dynamic-content><![CDATA[http://]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="link_2_name" type="text">
+		<dynamic-content><![CDATA[Go]]></dynamic-content>
+	</dynamic-element>
+		<dynamic-element name="Image_3" type="ddm-documentlibrary">
+		<dynamic-content><![CDATA[[$FILE=carousel_image_3.jpg$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="tagline_3" type="text">
+		<dynamic-content><![CDATA[Lorem ipsum]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="synopsis_3" type="textarea">
+		<dynamic-content><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis leo vitae purus tincidunt sodales ac semper sapien. Nunc pellentesque.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="link_3_url" type="text">
+		<dynamic-content><![CDATA[http://]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="link_3_name" type="text">
+		<dynamic-content><![CDATA[Visit]]></dynamic-content>
 	</dynamic-element>
 </root>

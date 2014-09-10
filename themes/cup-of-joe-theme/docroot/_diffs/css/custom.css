@@ -8,7 +8,7 @@ $defaultLink: #B8B8B8;
 $defaultLink2: #666;
 
 /* ---------- Base styles ---------- */
-.aui {	
+.aui {
 	body {
 		background-color: #FFF;
 		padding: 0;
@@ -76,7 +76,6 @@ $defaultLink2: #666;
 		}
 		
 		#heading {
-			height: 68px;
 			margin-bottom: 30px;
 			text-align: center;
 			width: 100%;
@@ -115,7 +114,7 @@ $defaultLink2: #666;
 					width: 25%;
 					
 					&:last-child {
-						border-bottom: none;
+						border-bottom-width: 0;
 					}
 				}
 			}
@@ -125,12 +124,17 @@ $defaultLink2: #666;
 	@media all and (min-width: 768px) {
 		#banner {
 			border-bottom: 3px solid $coffeeBrown;
-			height: 68px;
+
+			&:after {
+				clear: both;
+				content: "";
+				display: table;
+			}
 		}
 		
 		#heading {
 			float: left;
-			height: 68px;
+			line-height: 68px;
 			width: 50%;
 		}
 
@@ -151,7 +155,7 @@ $defaultLink2: #666;
 
 		.sort-pages.modify-pages {
 			float: right;
-			height: 68px;
+			line-height: 68px;
 			width: 50%;
 
 			> ul {
@@ -166,7 +170,7 @@ $defaultLink2: #666;
 					padding-right: 10px;
 					
 					&:last-child {
-						border-right: none;
+						border-right-width: 0;
 					}
 				}
 			}
@@ -174,12 +178,8 @@ $defaultLink2: #666;
 	}
 
 	/* ---------- Carousel ---------- */
-	.carousel {
-		margin-bottom: 60px;
-	}
-
 	#myCarousel {
-		margin-top: -90px;
+		margin-top: -48px;
 		position: relative;
 		text-align: center;
 		width: 100%;
@@ -233,9 +233,32 @@ $defaultLink2: #666;
 			    }
 
 			    @media all and (max-width: 767px) {
+			    	.header {
+			    		font-size: 24px;
+			    	}
+
 			    	.text {
 			    		font-size: 13px;
 			    		width: 70%;
+			    	}
+			    }
+			}
+
+			@media all and (max-width: 550px) {
+				.carousel-content {
+					top: 20%;
+
+			    	.text {
+			    		margin-bottom: 10px;
+			    		width: 95%;
+			    	}
+
+			    	.destination {
+			    		.link{
+			    			font-size: 13px;
+			    			line-height: 1.1;
+			    			padding: 5px 8px;
+			    		}
 			    	}
 			    }
 		    }
@@ -393,8 +416,8 @@ $defaultLink2: #666;
 					font-size: 18px;
 					font-weight: normal;
 					line-height: 1.1em;
-					margin-top: 20px;
 					margin-bottom: 10px;
+					margin-top: 20px;
 					text-transform: uppercase;
 					white-space: initial;
 				}	
@@ -420,8 +443,8 @@ $defaultLink2: #666;
 			.icons-container {
 				background-color: $darkBlueGray;
 				color: $coffeeBrown;
-				padding-top: 0;
 				margin: 1px -15px;
+				padding-top: 0;
 			}
 			
 			.lfr-icon-actions {
@@ -434,7 +457,7 @@ $defaultLink2: #666;
 					a span {
 						color: #878787;
 						margin-left: 5px;
-						padding-left:15px;
+						padding-left: 15px;
 						text-decoration: none;
 					}
 
@@ -456,6 +479,8 @@ $defaultLink2: #666;
 
 	/* ------- btns and nav -------*/
 		.portlet-style-1 {
+			margin: 25px auto;
+
 			.portlet {
 				.btn, .btn.btn-navbar, input[type="submit"] {
 					background: #FFF none;
@@ -489,7 +514,7 @@ $defaultLink2: #666;
 			}
 
 			.portlet {
-				border: 0;
+				border-width: 0;
 				color: $darkBlueGray;
 				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				min-height: 1px;
@@ -570,6 +595,8 @@ $defaultLink2: #666;
 
 	/* ------- btns and nav ------- */
 		.portlet-style-2 {
+			margin: 25px auto;
+
 			.portlet {
 				.btn, input[type="submit"]{
 					background: #FFF none;
@@ -588,8 +615,8 @@ $defaultLink2: #666;
 				}
 
 				.btn:hover, .btn.btn-navbar:hover, input[type="submit"]:hover {
-					color: $defaultLink2;
 					background-color: #E6E6E6;
+					color: $defaultLink2;
 				}
 
 				.btn.btn-navbar .icon-bar {
@@ -619,12 +646,13 @@ $defaultLink2: #666;
 					display: none;
 				}
 			}
+
 			.portlet {
-				border: 0;
+				border-width: 0;
 				color: $darkBlueGray;
 				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				margin: 0 0 15px;
 				min-height: 1px;
-				margin: 15px 0;
 				padding: 0;
 				position: relative;
 				text-align: center;
@@ -635,6 +663,7 @@ $defaultLink2: #666;
 					> i {
 						color: $coffeeBrown;
 						display: block;
+						font-size: 37px;
 						line-height: 45px;
 						margin: 5px auto 0;
 						position: relative;
@@ -659,7 +688,7 @@ $defaultLink2: #666;
 
 			.portlet:hover{
 				.portlet-title > i {
-					margin: 0 auto 5px auto;
+					margin: 0 auto 5px;
 				}
 			}
 
@@ -671,10 +700,6 @@ $defaultLink2: #666;
 			.portlet-body {
 				font-size: 14px;
 				text-align: center;
-				
-				img {
-					display: none;
-				}
 			}
 
 			.lfr-table {
@@ -687,7 +712,6 @@ $defaultLink2: #666;
 
 			@media all and (max-width: 767px) {
 				.portlet {
-					margin: 15px;
 					width: 100%;
 				}
 			}
@@ -701,7 +725,7 @@ $defaultLink2: #666;
 
 	/* ------- btns and nav -------*/
 		.portlet-style-3 {
-			margin: 30px auto;
+			margin: 25px auto;
 
 			.portlet {
 				.btn, .btn.btn-navbar {
@@ -713,7 +737,7 @@ $defaultLink2: #666;
 					font-weight: normal;
 					
 					&:hover {
-						color: #fff;
+						color: #FFF;
 					}
 
 					i {
@@ -764,8 +788,8 @@ $defaultLink2: #666;
 						font-size: 18px;
 						font-weight: normal;
 						line-height: 1.1em;
-						margin-top: 20px;
 						margin-bottom: 10px;
+						margin-top: 20px;
 						text-transform: uppercase;
 					}	
 				}
@@ -775,10 +799,6 @@ $defaultLink2: #666;
 				background: #FFF none;
 			}
 
-			.portlet-body img {
-				display: none;
-			}
-
 			.portlet-content {
 				margin: 0;
 				padding: 0 15px 15px;
@@ -786,8 +806,8 @@ $defaultLink2: #666;
 				.icons-container {
 					background-color: $darkBlueGray;
 					color: $coffeeBrown;
-					padding-top: 0;
 					margin: 1px -15px;
+					padding-top: 0;
 				}
 				
 				.lfr-icon-actions {
@@ -800,7 +820,7 @@ $defaultLink2: #666;
 						a span {
 							color: #878787;
 							margin-left: 5px;
-							padding-left:15px;
+							padding-left: 15px;
 							text-decoration: none;
 						}
 
@@ -858,7 +878,7 @@ $defaultLink2: #666;
 
 		.footer-title {
 			color: $coffeeBrown;
-			font-family:  "Montserrat", sans-serif;
+			font-family: "Montserrat", sans-serif;
 			font-weight: bold;
 			margin: 0 0 20px;
 			padding: 0 0 8px;
@@ -873,7 +893,7 @@ $defaultLink2: #666;
 			padding: 0;
 		
 			> li > a {
-				border-bottom: 1px #dedede solid;
+				border-bottom: 1px #DEDEDE solid;
 				color: #FFF;
 				display: block;
 				font-family: "Montserrat", sans-serif;
@@ -895,8 +915,8 @@ $defaultLink2: #666;
 
 		.sub-footer-container {
 			background-color: #FFF;
-			color: #000;
 			clear: both;
+			color: #000;
 			display: block;
 			font-family: "Open Sans", sans-serif;
 			font-size: 11px;
@@ -1085,42 +1105,42 @@ $defaultLink2: #666;
 		}
 
 		#facebook {
-			background: transparent url('..//images/social-media-facebook.png') no-repeat 0 -40px/auto scroll;
+			background: transparent url(..//images/social-media-facebook.png) no-repeat 0 -40px/auto scroll;
 
 			&:hover {
-				background: #3B5998 url('..//images/social-media-facebook.png') 0 0/auto;
+				background: #3B5998 url(..//images/social-media-facebook.png) 0 0/auto;
 			}
 		}
 
 		#googlePlus {
-			background: transparent url('..//images/social-media-googlePlus.png') no-repeat 0 -40px/auto scroll;
+			background: transparent url(..//images/social-media-googlePlus.png) no-repeat 0 -40px/auto scroll;
 		
 			&:hover {
-				background: #D94A39 url('..//images/social-media-googlePlus.png') 0 0/auto;
+				background: #D94A39 url(..//images/social-media-googlePlus.png) 0 0/auto;
 			}
 		}
 
 		#linkedin {
-			background: transparent url('..//images/social-media-linkedIn.png') no-repeat 0 -40px/auto scroll;
+			background: transparent url(..//images/social-media-linkedIn.png) no-repeat 0 -40px/auto scroll;
 		
 			&:hover {
-				background: #71B2D0 url('..//images/social-media-linkedIn.png') 0 0/auto;
+				background: #71B2D0 url(..//images/social-media-linkedIn.png) 0 0/auto;
 			}
 		}
 
 		#tumblr {
-			background: transparent url('..//images/social-media-tumblr.png') no-repeat 0 -40px/auto scroll;
+			background: transparent url(..//images/social-media-tumblr.png) no-repeat 0 -40px/auto scroll;
 		
 			&:hover {
-				background: #32506D url('..//images/social-media-tumblr.png') 0 0/auto; 
+				background: #32506D url(..//images/social-media-tumblr.png) 0 0/auto; 
 			}
 		}
 
 		#twitter {
-			background: transparent url('..//images/social-media-twitter.png') no-repeat 0 -40px/auto scroll;
+			background: transparent url(..//images/social-media-twitter.png) no-repeat 0 -40px/auto scroll;
 		
 			&:hover {
-				background: #00A0D1 url('..//images/social-media-twitter.png') 0 0/auto;
+				background: #00A0D1 url(..//images/social-media-twitter.png) 0 0/auto;
 			}
 		}
 	}
@@ -1128,17 +1148,30 @@ $defaultLink2: #666;
 /* ------------ Web Content ------------ */
 	body{
 		#main-content{
+			.portlet-borderless-container {
+				margin: 20px 0 50px;
+			}
+
+			.portlet-boundary {
+				margin-bottom: 30px;
+			}
+
+
 			.portlet-style-1 {
+				.portlet-boundary {
+					padding-top: 0.1px;
+				}
+
 				.portlet-journal-content {
 					.portlet {
 						padding: 0;
 
 						.portlet-title {
 							.portlet-title-text {
+								display: inline-block;
 								font-size: 24px;
 								font-weight: bold;
 								line-height: 30px;
-								display: inline-block;
 							}
 
 							&::before{
@@ -1160,9 +1193,9 @@ $defaultLink2: #666;
 						font-size: 24px;
 						font-weight: bold;
 						height: 30px;
-						margin: -35px auto 1px;
-						width: 100%;
+						margin: 5px auto 1px;
 						text-transform: uppercase;
+						width: 100%;
 
 						&::before, {
 							border-bottom: 1px solid #2C3E50;
@@ -1209,11 +1242,12 @@ $defaultLink2: #666;
 
 					.journal-content-article {
 						.product-header-icon {
-							margin: 10px auto 5px;
+							margin: 0 auto;
+							padding: 5px 0 0;
 	
 							i {
 								color: $coffeeBrown;
-								font-size: 39px;
+								font-size: 42px;
 								position: relative;
 							}
 						}
@@ -1226,17 +1260,25 @@ $defaultLink2: #666;
 							text-transform: uppercase;
 						}
 					}
-					.portlet:hover {
-						.journal-content-article {
-							.product-header-icon {
-								margin: 5px auto 10px;
-							}
+
+					.journal-content-article:hover {
+						.product-header-icon {
+							padding: 0 0 5px;
 						}
 					}
 				}						
 			}
 
 			.portlet-style-3 {
+				.portlet-borderless-container{
+					border: 1px solid #DBDBDB;
+					margin: 15px;
+
+					.portlet-body{
+						padding: 15px 15px 0;
+					}
+				}
+
 				.portlet-journal-content {
 					.portlet-content {
 						padding-bottom: 0;
@@ -1244,6 +1286,21 @@ $defaultLink2: #666;
 
 					p {
 						margin: 0 0 5px;
+					}
+
+					.heading {
+						color: $coffeeBrown;
+						font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+						font-size: 18px;
+						line-height: 1.1;
+						margin: 20px 0 10px;
+						text-transform: uppercase;
+					}
+
+					.synopsis {
+						font-family: "Open Sans", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+						font-size: 13px;
+						padding: 15px 0;
 					}
 
 					.portlet-footer {
@@ -1390,7 +1447,7 @@ $defaultLink2: #666;
 	
 	body #main-content {
 		.portlet-style-2 .portlet-journal-content .journal-content-article .product-header-icon {
-			@include transition (margin 0.3s ease);
+			@include transition (padding 0.3s ease);
 		}
 	}
 }

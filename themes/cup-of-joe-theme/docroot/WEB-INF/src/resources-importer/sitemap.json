@@ -4,12 +4,61 @@
 		{
 			"columns": [
 				[
-					"Main Carousel.xml", 
+					"Main Carousel.xml",
+					"Enjoy.xml"
+				],
+				[
+					"Coffee And Tea.xml"
+				],
+				[
+					"Gifts And Accessories.xml"
+				],
+				[
+					"We Come To You.xml"
+				],
+				[
+					"Our Shop.xml"
+				],
+				[
+					"What We Are About.xml"
+				],
+				[
+					"Gourmet Coffee Defined.xml"
+				],
+				[
+					"Our Process And Method.xml"
+				],
+				[
+					"The World Of Coffee.xml"
 				]
 			],
 			"friendlyURL": "/home",
 			"name": "Home",
 			"title": "Home"
+		},
+		{
+			"friendlyURL": "/shop",
+			"layoutTemplateId": "2_columns_iii",
+			"name": "Shop",
+			"title": "Shop"
+		},
+		{
+			"friendlyURL": "/blog",
+			"layoutTemplateId": "2_columns_iii",
+			"name": "Blog",
+			"title": "Blog"
+		},
+		{
+			"friendlyURL": "/about-us",
+			"layoutTemplateId": "2_columns_iii",
+			"name": "About Us",
+			"title": "About Us"
+		},
+		{
+			"friendlyURL": "/contact-us",
+			"layoutTemplateId": "2_columns_iii",
+			"name": "Contact Us",
+			"title": "Contact Us"
 		}
 	]
 }

@@ -1,0 +1,35 @@
+## ----- Footer Links -----##
+#set ($footer_link_header = $theme.getSetting("footer-link-header"))
+#set ($link_1_tagline = $theme.getSetting("footer-link-1_tagline"))
+#set ($link_2_tagline = $theme.getSetting("footer-link-2_tagline"))
+#set ($link_3_tagline = $theme.getSetting("footer-link-3_tagline"))
+#set ($link_1_url = $theme.getSetting("footer-link-1_url"))
+#set ($link_2_url = $theme.getSetting("footer-link-2_url"))
+#set ($link_3_url = $theme.getSetting("footer-link-3_url"))
+
+## ----- Social Icons ----- ##
+#set ($facebook_url = "http://www.facebook.com")
+#set ($googlePlus_url = "http://plus.google.com")
+#set ($linkedin_url = "http://www.linkedin.com")
+#set ($tumblr_url = "http://www.tumblr.com")
+#set ($twitter_url = "http://www.twitter.com")
+
+#if ($theme_settings.social-media-url-icon_facebook)
+ #set ($facebook_url = $facebook_url + $theme.getSetting("social-media-url-icon_facebook"))
+#end
+
+#if ($theme_settings.social-media-url-icon_googlePlus)
+ #set ($googlePluse_url = $googlePluse_url + $theme.getSetting("social-media-url-icon_googlePlus"))
+#end
+
+#if ($theme_settings.social-media-url-icon_linkedin)
+ #set ($linkedin_url = $linkedin_url + $theme.getSetting("social-media-url-icon_linkedin"))
+#end
+
+#if ($theme_settings.social-media-url-icon_tumblr)
+ #set ($tumblr_url = $tumblr_url + $theme.getSetting("social-media-url-icon_tumblr"))
+#end
+
+#if ($theme_settings.social-media-url-icon_twitter)
+ #set ($twitter_url = $twitter_url + $theme.getSetting("social-media-url-icon_twitter"))
+#end

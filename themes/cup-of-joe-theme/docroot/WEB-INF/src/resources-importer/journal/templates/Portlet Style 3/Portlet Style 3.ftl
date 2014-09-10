@@ -1,9 +1,12 @@
-${synopsis.getData()}
+<div class="heading">
+	${header.getData()}
+</div>
 
-<br>
-<br>
+<div class="synopsis">
+	${synopsis.getData()}
+</div>
 
-<div class="portlet-style-3 portlet-footer">
+<div class="portlet-footer">
     <a href="${synopsis_link.getFriendlyUrl()}">
         <i class="${link_icon.getData()} link-icon"></i>
         ${synopsis_link_name.getData()}

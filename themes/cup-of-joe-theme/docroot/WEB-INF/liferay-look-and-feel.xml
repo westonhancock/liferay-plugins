@@ -1,63 +1,104 @@
 <?xml version="1.0"?>
-<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN"
-"http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
 
 <look-and-feel>
     <compatibility>
         <version>6.2.0+</version>
     </compatibility>
     <theme id="cup-of-joe" name="Cup of Joe">
-        <settings>
-            <setting key="header-type" value="detailed" />
-           
-           <!-- footer links -->
-            <setting configurable="true"
-                key="display-footer-link-1"
-                type="link"
-                value=""
-            />
-           
-            <setting configurable="true"
-                key="display-footer-link-2"
-                type="link"
-                value="true"
-            />
-           
-            <setting configurable="true"
-                key="display-footer-link-3"
-                type="link"
-                value="true"
-            />
-            
+    	<settings>
+    		<!-- footer links -->
+            <setting configurable="true" key="footer-link-header" type="text" value="Link Header"/>
+            <setting configurable="true" key="display-footer-link-1" type="checkbox" value="true"/>
+            <setting configurable="true" key="footer-link-1_url" type="text" value="http://"/>
+            <setting configurable="true" key="footer-link-1_tagline" type="text" value="Contact Us"/>
+            <setting configurable="true" key="display-footer-link-2" type="checkbox" value="true"/>
+            <setting configurable="true" key="footer-link-2_url" type="text" value="http://"/>
+            <setting configurable="true" key="footer-link-2_tagline" type="text" value="Careers"/>
+            <setting configurable="true" key="display-footer-link-3" type="checkbox" value="true"/>
+            <setting configurable="true" key="footer-link-3_url" type="text" value="http://"/>
+            <setting configurable="true" key="footer-link-3_tagline" type="text" value="Link To Page"/>
             <!-- footer social icons -->
-            <setting configurable="true"
-                key="display-social-media-icon_facebook"
-                type="text"
-                value="true"
-            />
-           
-            <setting configurable="true"
-                key="display-social-media-icon_googlePlus"
-                type="text"
-                value="true"
-            />
-          
-            <setting configurable="true"
-                key="display-social-media-icon_linkedIn"
-                type="text"
-                value="true"
-            />
-          
-            <setting configurable="true"
-                key="display-social-media-icon_tumblr"
-                type="text"
-                value="true"
-            />
-            <setting configurable="true"
-                key="display-social-media-icon_twitter"
-                type="text"
-                value="true"
-            />
+            <setting configurable="true" key="display-social-media-icon_facebook" type="checkbox" value="true"/>
+            <setting configurable="true" key="social-media-url-icon_facebook" type="text" value="/">
+                <![CDATA[
+                    YUI().use (
+                        'aui-node',
+                        function(F) {
+                            var child = F.one('input[id$="url-icon_facebook"]');
+                            var baseURL = F.Node.create('<div />');
+                            var parent = F.one('.control-group');
+                            parent.insertBefore(baseURL,child);
+                            baseURL.setStyles({"background": '#EEE', "border": '1px solid #CCC', "color": '#555', "height": '20px',  "line-height": '20px', "padding": '4px 6px', "width": '206px' });
+                            baseURL.setHTML('http://www.facebook.com');
+                        }
+                    );
+                ]]>
+            </setting>
+            <setting configurable="true" key="display-social-media-icon_googlePlus" type="checkbox" value="true"/>
+            <setting configurable="true" key="social-media-url-icon_googlePlus" type="text" value="/">
+                <![CDATA[
+                    YUI().use (
+                        'aui-node',
+                        function(G) {
+                            var child = G.one('input[id$="url-icon_googlePlus"]');
+                            var baseURL = G.Node.create('<div />');
+                            var parent = G.one('.control-group');
+                            parent.insertBefore(baseURL,child);
+                            baseURL.setStyles({"background": '#EEE', "border": '1px solid #CCC', "color": '#555', "height": '20px',  "line-height": '20px', "padding": '4px 6px', "width": '206px' });
+                            baseURL.setHTML('http://plus.google.com');
+                        }
+                    );
+                ]]>
+            </setting>
+            <setting configurable="true" key="display-social-media-icon_linkedin" type="checkbox" value="true"/>
+            <setting configurable="true" key="social-media-url-icon_linkedin" type="text" value="/">
+                <![CDATA[
+                    YUI().use (
+                        'aui-node',
+                        function(L) {
+                            var child = L.one('input[id$="url-icon_linkedin"]');
+                            var baseURL = L.Node.create('<div />');
+                            var parent = L.one('.control-group');
+                            parent.insertBefore(baseURL,child);
+                            baseURL.setStyles({"background": '#EEE', "border": '1px solid #CCC', "color": '#555', "height": '20px',  "line-height": '20px', "padding": '4px 6px', "width": '206px' });
+                            baseURL.setHTML('http://www.linkedin.com');
+                        }
+                    );
+                ]]>
+            </setting>
+            <setting configurable="true" key="display-social-media-icon_tumblr" type="checkbox" value="true"/>
+            <setting configurable="true" key="social-media-url-icon_tumblr" type="text" value="/">
+                <![CDATA[
+                    YUI().use (
+                        'aui-node',
+                        function(Tb) {
+                            var child = Tb.one('input[id$="url-icon_tumblr"]');
+                            var baseURL = Tb.Node.create('<div />');
+                            var parent = Tb.one('.control-group');
+                            parent.insertBefore(baseURL,child);
+                            baseURL.setStyles({"background": '#EEE', "border": '1px solid #CCC', "color": '#555', "height": '20px',  "line-height": '20px', "padding": '4px 6px', "width": '206px' });
+                            baseURL.setHTML('http://www.tumblr.com');
+                        }
+                    );
+                ]]>
+            </setting>
+            <setting configurable="true" key="display-social-media-icon_twitter" type="checkbox" value="true"/>
+            <setting configurable="true" key="social-media-url-icon_twitter" type="text" value="/">
+                <![CDATA[
+                    YUI().use (
+                        'aui-node',
+                        function(Tw) {
+                            var child = Tw.one('input[id$="url-icon_twitter"]');
+                            var baseURL = Tw.Node.create('<div />');
+                            var parent = Tw.one('.control-group');
+                            parent.insertBefore(baseURL,child);
+                            baseURL.setStyles({"background": '#EEE', "border": '1px solid #CCC', "color": '#555', "height": '20px',  "line-height": '20px', "padding": '4px 6px', "width": '206px' });
+                            baseURL.setHTML('http://www.twitter.com');
+                        }
+                    );
+                ]]>
+            </setting>
         </settings>
     </theme>
 </look-and-feel>

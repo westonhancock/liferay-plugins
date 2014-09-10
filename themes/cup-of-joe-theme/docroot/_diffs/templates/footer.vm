@@ -1,0 +1,75 @@
+<footer id="footer" role="contentinfo">
+	<div class="footer-main">
+		<div class="footer-container">
+			<div class="footer-wrapper">
+				<div class="footer-row">
+					<div class="footer-column">
+						<div class="footer-title">$footer_link_header</div>
+						
+						<ul>
+							#if ($theme.getSetting("display-footer-link-1") == "true")
+								<li><a href="$link_1_url">$link_1_tagline</a></li>
+							#end
+
+							#if ($theme.getSetting("display-footer-link-2") == "true")
+								<li><a href="$link_2_url">$link_2_tagline</a></li>
+							#end
+
+							#if ($theme.getSetting("display-footer-link-3") == "true")
+								<li><a href="$link_3_url">$link_3_tagline</a></li>
+							#end
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>		
+		
+		<div class="sub-footer">
+			<div class="sub-footer-container">
+				<div class="sub-footer-row">
+					<div class="sub-footer-column" id="column-left">						
+						<div class="powered-by">
+							#language ("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
+						</div>
+					</div>
+					
+					<div class="sub-footer-column" id="column-right">
+						<div class="social-icons">
+							<ul>
+								#if ($theme.getSetting("display-social-media-icon_facebook") == "true")
+									<li>
+										<a href="$facebook_url" id="facebook" target="_blank"></a>
+									</li>
+								#end
+
+								#if ($theme.getSetting("display-social-media-icon_googlePlus") == "true")
+									<li>
+										<a href="$googlePlus_url" id="googlePlus" target="_blank"></a>
+									</li>
+								#end
+
+								#if ($theme.getSetting("display-social-media-icon_linkedin") == "true")
+									<li>
+										<a href="$linkedin_url" id="linkedin" target="_blank"></a>
+									</li>
+								#end
+
+								#if ($theme.getSetting("display-social-media-icon_tumblr") == "true")
+									<li>
+										<a href="$tumblr_url" id="tumblr" target="_blank"></a>
+									</li>
+								#end
+
+								#if ($theme.getSetting("display-social-media-icon_twitter") == "true")
+									<li>
+										<a href="$twitter_url" id="twitter" target="_blank"></a>
+									</li>
+								#end
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

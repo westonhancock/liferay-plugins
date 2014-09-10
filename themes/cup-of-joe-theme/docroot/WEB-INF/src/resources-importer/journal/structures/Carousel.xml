@@ -14,4 +14,283 @@
 			</entry>
 		</meta-data>
 	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" multiple="false" name="transition_delay" readOnly="false" repeatable="false" required="true" showLabel="true" type="select" width="">
+		<dynamic-element name="option1" type="option" value="1">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[1]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option2" type="option" value="2">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[2]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option3" type="option" value="3">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[3]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option4" type="option" value="4">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[4]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5" type="option" value="5">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[5]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option6" type="option" value="6">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[6]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option7" type="option" value="7">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[7]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option8" type="option" value="8">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[8]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option9" type="option" value="9">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[9]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option10" type="option" value="10">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[10]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Transition Delay]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[["5"]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Number of seconds]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+
+	<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="keyword" name="Image_1" readOnly="false" repeatable="false" required="true" showLabel="true" type="ddm-documentlibrary" width="">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Image 1]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="tagline_1" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Tagline 1]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="synopsis_1" readOnly="false" repeatable="false" required="false" showLabel="true" type="textarea" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Synopsis]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="link_1_url" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Link URL]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[http://]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="link_1_name" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Link Name]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[Read]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="keyword" name="Image_2" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-documentlibrary" width="">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Image 2]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="tagline_2" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Tagline 2]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="synopsis_2" readOnly="false" repeatable="false" required="false" showLabel="true" type="textarea" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Synopsis]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="link_2_url" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Link URL]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[http://]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="link_2_name" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Link Name]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[Go]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="keyword" name="Image_3" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-documentlibrary" width="">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Image 3]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="tagline_3" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Tagline 3]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="synopsis_3" readOnly="false" repeatable="false" required="false" showLabel="true" type="textarea" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Synopsis]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="link_3_url" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Link URL]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[http://]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="link_3_name" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Link Name]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[Visit]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
 </root>
