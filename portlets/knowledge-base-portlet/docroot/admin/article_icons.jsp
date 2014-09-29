@@ -26,7 +26,7 @@ long resourcePrimKey = ParamUtil.getLong(request, "resourcePrimKey");
 
 <c:if test="<%= (AdminPermission.contains(permissionChecker, scopeGroupId, ActionKeys.ADD_KB_ARTICLE) && rootPortletId.equals(PortletKeys.KNOWLEDGE_BASE_ADMIN)) || (DisplayPermission.contains(permissionChecker, scopeGroupId, ActionKeys.ADD_KB_ARTICLE) && DisplayPermission.contains(permissionChecker, scopeGroupId, ActionKeys.ADMINISTRATOR) && rootPortletId.equals(PortletKeys.KNOWLEDGE_BASE_DISPLAY)) || ((!rootPortletId.equals(PortletKeys.KNOWLEDGE_BASE_DISPLAY) || DisplayPermission.contains(permissionChecker, scopeGroupId, ActionKeys.ADMINISTRATOR)) && KBArticlePermission.contains(permissionChecker, kbArticle, ActionKeys.UPDATE)) || (kbArticle.isRoot() && KBArticlePermission.contains(permissionChecker, kbArticle, ActionKeys.PERMISSIONS)) || KBArticlePermission.contains(permissionChecker, kbArticle, ActionKeys.MOVE_KB_ARTICLE) || KBArticlePermission.contains(permissionChecker, kbArticle, ActionKeys.DELETE) %>">
 	<div class="kb-article-icons text-right">
-		<liferay-ui:icon-menu cssClass="right" direction="down" extended="<%= false %>" triggerCssClass="btn">
+		<liferay-ui:icon-menu cssClass="right" direction="down" extended="<%= false %>" icon="<%= StringPool.BLANK %>" message="<%= StringPool.BLANK %>" triggerCssClass="btn btn-default">
 			<c:if test="<%= (AdminPermission.contains(permissionChecker, scopeGroupId, ActionKeys.ADD_KB_ARTICLE) && rootPortletId.equals(PortletKeys.KNOWLEDGE_BASE_ADMIN)) || (DisplayPermission.contains(permissionChecker, scopeGroupId, ActionKeys.ADD_KB_ARTICLE) && DisplayPermission.contains(permissionChecker, scopeGroupId, ActionKeys.ADMINISTRATOR) && rootPortletId.equals(PortletKeys.KNOWLEDGE_BASE_DISPLAY)) %>">
 				<liferay-portlet:renderURL var="addKBArticleURL">
 					<portlet:param name="mvcPath" value='<%= templatePath + "edit_article.jsp" %>' />
@@ -35,7 +35,7 @@ long resourcePrimKey = ParamUtil.getLong(request, "resourcePrimKey");
 				</liferay-portlet:renderURL>
 
 				<liferay-ui:icon
-					image="add_article"
+					iconCssClass="icon-plus"
 					label="<%= true %>"
 					message="add-child-article"
 					method="get"
@@ -52,8 +52,9 @@ long resourcePrimKey = ParamUtil.getLong(request, "resourcePrimKey");
 				</liferay-portlet:renderURL>
 
 				<liferay-ui:icon
-					image="edit"
+					iconCssClass="icon-edit"
 					label="<%= true %>"
+					message="edit"
 					method="get"
 					url="<%= editURL %>"
 				/>
@@ -69,8 +70,9 @@ long resourcePrimKey = ParamUtil.getLong(request, "resourcePrimKey");
 				/>
 
 				<liferay-ui:icon
-					image="permissions"
+					iconCssClass="icon-lock"
 					label="<%= true %>"
+					message="permissions"
 					method="get"
 					url="<%= permissionsURL %>"
 					useDialog="<%= true %>"
@@ -86,7 +88,7 @@ long resourcePrimKey = ParamUtil.getLong(request, "resourcePrimKey");
 				</liferay-portlet:renderURL>
 
 				<liferay-ui:icon
-					image="forward"
+					iconCssClass="icon-move"
 					label="<%= true %>"
 					message="move"
 					method="get"
