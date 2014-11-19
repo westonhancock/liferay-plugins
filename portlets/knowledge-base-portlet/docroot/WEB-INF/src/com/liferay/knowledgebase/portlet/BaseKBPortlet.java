@@ -133,7 +133,7 @@ public abstract class BaseKBPortlet extends MVCPortlet {
 
 		KBCommentServiceUtil.deleteKBComment(kbCommentId);
 
-		SessionMessages.add(actionRequest, "feedbackDeleted");
+		SessionMessages.add(actionRequest, "suggestionDeleted");
 	}
 
 	public void deleteTempAttachment(
@@ -395,7 +395,7 @@ public abstract class BaseKBPortlet extends MVCPortlet {
 				serviceContext);
 		}
 
-		SessionMessages.add(actionRequest, "feedbackSaved");
+		SessionMessages.add(actionRequest, "suggestionSaved");
 	}
 
 	public void updateKBCommentStatus(
@@ -411,7 +411,7 @@ public abstract class BaseKBPortlet extends MVCPortlet {
 
 		KBCommentServiceUtil.updateStatus(kbCommentId, status, serviceContext);
 
-		SessionMessages.add(actionRequest, "feedbackStatusUpdated");
+		SessionMessages.add(actionRequest, "suggestionStatusUpdated");
 	}
 
 	protected String buildEditURL(
