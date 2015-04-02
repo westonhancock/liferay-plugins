@@ -68,7 +68,7 @@
 			<div class="chat-tabs-container">
 				<ul class="chat-tabs">
 					<li class="buddy-list loading <%= openPanelId.equals("buddylist") ? "selected" : "" %>">
-						<div class="panel-trigger" panelId="buddylist">
+						<div class="panel-trigger" panelId="buddylist" tabindex="0">
 							<span class="trigger-name"><%= LanguageUtil.format(request, "online-friends-x", "(" + buddiesCount + ")", false) %></span>
 						</div>
 
@@ -98,7 +98,7 @@
 											String userUuid = (String)buddy[9];
 										%>
 
-											<li class="active user" data-groupId="<%= groupId %>" data-userId="<%= userId %>">
+											<li class="active user" data-groupId="<%= groupId %>" data-userId="<%= userId %>" tabindex="0">
 												<img alt="" src="<%= UserConstants.getPortraitURL(themeDisplay.getPathImage(), male, portraitId, userUuid) %>" />
 
 												<div class="name">
@@ -118,7 +118,7 @@
 						</div>
 					</li>
 					<li class="chat-settings <%= openPanelId.equals("settings") ? "selected" : "" %>">
-						<div class="panel-trigger" panelId="settings">
+						<div class="panel-trigger" panelId="settings" tabindex="0">
 							<span class="trigger-name"><liferay-ui:message key="settings" /></span>
 						</div>
 

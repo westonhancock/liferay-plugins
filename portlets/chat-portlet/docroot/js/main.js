@@ -7,6 +7,7 @@ AUI().use(
 	'aui-datatype',
 	'aui-live-search-deprecated',
 	'liferay-poller',
+	'node-focusmanager',
 	'stylesheet',
 	'swfobject',
 	function(A) {
@@ -262,6 +263,7 @@ AUI().use(
 				instance._popupTrigger = panel.one('.panel-trigger');
 
 				instance._popupTrigger.on('click', instance.toggle, instance);
+				instance._popupTrigger.on('keyup', instance._keyup, instance);
 
 				panel.all('.panel-button').on(
 					'click',
@@ -282,12 +284,27 @@ AUI().use(
 				instance._tabsContainer.append(panel);
 			},
 
+			_keyup: function(event) {
+				var instance = this;
+
+				var keyCode = event.keyCode;
+
+				if (keyCode == 13) {
+					instance.toggle();
+				}
+
+				if (keyCode == 27) {
+					instance.hide();
+					instance._popupTrigger.focus();
+				}
+			},
+
 			_setPanelHTML: function(html) {
 				var instance = this;
 
 				if (!html) {
 					html = '<li class="panel">' +
-						'<div class="panel-trigger"><span class="trigger-name"></span></div>' +
+						'<div class="panel-trigger" tabindex="0"><span class="trigger-name"></span></div>' +
 						'<div class="chat-panel">' +
 							'<div class="panel-window">' +
 								'<div class="panel-button minimize"></div>' +
@@ -564,6 +581,11 @@ AUI().use(
 						chatInputEl.value = '';
 					}
 
+					if (event.keyCode == 27) {
+						instance.hide();
+						instance._popupTrigger.focus();
+					}
+
 					instance._autoSize();
 				},
 
@@ -596,7 +618,7 @@ AUI().use(
 					var userImagePath = Liferay.Chat.Util.getUserImagePath(instance._panelIcon);
 
 					var html = '<li class="user user_' + instance._panelId + '" panelId="' + instance._panelId + '">' +
-							'<div class="panel-trigger">' +
+							'<div class="panel-trigger" tabindex="0">' +
 								'<span class="trigger-name"></span>' +
 								'<div class="typing-status"></div>' +
 							'</div>' +
@@ -870,6 +892,14 @@ AUI().use(
 					}
 				);
 
+				buddyListNode.delegate(
+					'key',
+					function(event) {
+						buddyListPanel.hide();
+						buddyListNode.one('.panel-trigger').focus();
+					}, 'up:27', 'input, li.active.user'
+				);
+
 				if (buddyList) {
 					buddyList.delegate(
 						'click',
@@ -889,6 +919,12 @@ AUI().use(
 						},
 						'li, .buddy-services div'
 					);
+
+					buddyList.plug(A.Plugin.NodeFocusManager, {
+						circular: true,
+						descendants: 'li',
+						keys: { next: 'down:40', previous: 'down:38' }
+					});
 				}
 
 				instance._searchBuddiesField = searchBuddiesField;
@@ -1040,6 +1076,14 @@ AUI().use(
 				}
 
 				saveSettings.on('click', instance._updateSettings, instance);
+
+				settingsPanel.delegate(
+					'key',
+					function(event) {
+						settings.hide();
+						settingsPanel.one('.panel-trigger').focus();
+					}, 'up:27', 'input'
+				);
 			},
 
 			_getNotifyPermission: function() {
@@ -1290,6 +1334,10 @@ AUI().use(
 				var currentBuddies = instance._buddies;
 				var currentChats = instance._chatSessions;
 
+				var focusManager = instance._onlineBuddies.focusManager;
+
+				var buddyFocused = focusManager.get('focused');
+
 				instance._onlineBuddiesCount = numBuddies;
 
 				var buffer = [''];
@@ -1330,6 +1378,12 @@ AUI().use(
 				}
 
 				instance._onlineBuddies.html(buffer.join(''));
+
+				focusManager.refresh();
+
+				if (buddyFocused) {
+					focusManager.focus();
+				}
 
 				if (
 					searchBuddiesField.test(':visible') &&
