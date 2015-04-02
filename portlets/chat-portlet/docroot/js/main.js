@@ -604,7 +604,7 @@ AUI().use(
 								'<div class="panel-window">' +
 									'<div class="panel-button minimize"></div>' +
 									'<div class="panel-button close"></div>' +
-									'<img alt="" class="panel-icon" src="' + userImagePath + '" />' +
+									'<img alt="' + LString.escapeHTML(instance._panelTitle) + '" class="panel-icon" src="' + userImagePath + '" />' +
 									'<div class="panel-title">' + LString.escapeHTML(instance._panelTitle) + '</div>' +
 									'<div class="panel-profile">...</div>' +
 									'<div class="panel-output"></div>' +
@@ -1311,8 +1311,8 @@ AUI().use(
 					var userImagePath = Liferay.Chat.Util.getUserImagePath(buddy.portraitURL);
 
 					buffer.push(
-						'<li class="active user" data-groupId="' + buddy.groupId + '" data-userId="' + buddy.userId + '">' +
-							'<img alt="" src="' + userImagePath + '" />' +
+						'<li class="active user" data-groupId="' + buddy.groupId + '" data-userId="' + buddy.userId + '" title="' + LString.escapeHTML(buddy.fullName) + '">' +
+							'<img alt="' + LString.escapeHTML(buddy.fullName) + '" src="' + userImagePath + '" />' +
 							'<div class="name">' + LString.escapeHTML(buddy.fullName) + '</div>' +
 							'<div class="buddy-services">'
 					);
