@@ -21,7 +21,7 @@ AUI().use(
 						'<div class="panel-button minimize"></div>' +
 						'<div class="panel-button close"></div>' +
 						'<div class="panel-self-view">' +
-							'<img alt="{panelTitle}" src="{userImagePath}" title="{panelTitle}" />' +
+							'<img alt="{panelTitle}" src="{userImagePath}" />' +
 							'<video autoplay="autoplay" class="local hide" muted="muted"></video>' +
 						'</div>' +
 						'<div class="panel-title">{panelTitle}</div>' +
@@ -412,10 +412,8 @@ AUI().use(
 					el.pause();
 					el.currentTime = 0;
 				}
+				// Probably not ready yet: not playing anyway
 				catch (e) {
-
-					// Probably not ready yet: not playing anyway
-
 				}
 			},
 
