@@ -241,9 +241,12 @@ AUI().use(
 			toggle: function() {
 				var instance = this;
 
-				var selected = instance.get('selected');
-
-				instance.toggle(!selected);
+				if (instance.get('selected')) {
+					instance.hide();
+				}
+				else {
+					instance.show();
+				}
 			},
 
 			_createPanel: function(fromMarkup) {
@@ -553,7 +556,7 @@ AUI().use(
 
 						chatInput.setStyle('overflowY', overflowY);
 
-						chatInput.ancestor.height((height + 5));
+						chatInput.ancestor().height((height + 5));
 					}
 				},
 
